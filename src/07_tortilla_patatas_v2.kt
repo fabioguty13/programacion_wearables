@@ -10,12 +10,12 @@ fun main() {
         val respuesta = readLine()
         if (respuesta.equals("s", ignoreCase = true)){
             println("Cuantas unidades/cantidades tienes de ${it}?")
-            val cantidad: String? = readLine()
-            cantidad?.let { it1 -> cantidades[ingredientes.indexOf(it)] = it1}
+            val cantidad = readln()
+            cantidades[ingredientes.indexOf(it)] = cantidad.toInt();
         } else {
             println("Cuantas unidades necesitas de ${it}?")
-            val cantidad = readLine()
-            cantidad?.let { it1 -> cantidades[ingredientes.indexOf(it)] = it1}
+            val cantidad = readln()
+            cantidades[ingredientes.indexOf(it)] = cantidad.toInt();
         }
 
     }
